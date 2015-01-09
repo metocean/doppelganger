@@ -1,2 +1,3 @@
-# doppelganger
-Pretend to be another service in a different datacentre
+# Doppelgänger
+
+Pretend to be a consul service

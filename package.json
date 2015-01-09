@@ -1,0 +1,25 @@
+{
+  "name": "consul-doppelganger",
+  "version": "0.0.1",
+  "description": "Pretend to be a consul service",
+  "bin": {
+    "doppelganger": "bin/doppelganger.js"
+  },
+  "dependencies": {
+    "colors": "1.0.3",
+    "js-yaml": "^3.2.5",
+    "redwire": "*",
+    "consul-utils": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:metocean/doppelganger.git"
+  },
+  "author": "Thomas Coats",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/metocean/doppelganger/issues"
+  },
+  "readmeFilename": "README.md",
+  "homepage": "https://github.com/metocean/doppelganger"
+}
