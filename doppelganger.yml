@@ -1,0 +1,6 @@
+daemon:
+  image: metocean/doppelganger
+  volumes:
+  - ./examples:/consul
+  - ./examples:/doppelganger
+  - ./examples:/harmony

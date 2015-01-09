@@ -1,0 +1,6 @@
+{
+  "datacenter": "tomtom",
+  "retry_join": [
+    "192.168.59.103"
+  ]
+}
