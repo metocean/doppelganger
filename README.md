@@ -25,6 +25,8 @@ npm install -g redwire-doppelganger
 
 This will provide the `doppelganger` command line daemon.
 
+To reload any changes send a SIGHUP to the doppelganger daemon
+
 
 # Docker Container
 
