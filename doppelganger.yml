@@ -1,5 +1,5 @@
 daemon:
-  image: metocean/doppelganger
+  build: ./docker/
   dns: 127.0.0.1
   volumes:
   - ./examples:/consul
