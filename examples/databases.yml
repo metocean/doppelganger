@@ -1,5 +1,0 @@
-- name: redis
-  port: 6370
-
-- name: mysql
-  port: 3306
