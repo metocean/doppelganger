@@ -1,3 +1,5 @@
+shell = require 'shelljs'
+shell.config.fatal = yes
 require 'shelljs/global'
 
 # Link node
