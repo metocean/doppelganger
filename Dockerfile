@@ -1,4 +1,3 @@
-# https://github.com/phusion/baseimage-docker/blob/master/Changelog.md
 FROM metocean/baseimage-nodejs:latest
 MAINTAINER Thomas Coats <thomas@metocean.co.nz>
 
