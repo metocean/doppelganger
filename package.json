@@ -1,6 +1,6 @@
 {
   "name": "consul-doppelganger",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Pretend to be a consul service",
   "bin": {
     "doppelganger": "bin/doppelganger.js"
