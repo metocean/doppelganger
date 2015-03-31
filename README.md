@@ -20,7 +20,7 @@ The 'doppelganger' tag is used to highlight these new services.
 # Installation
 
 ```sh
-npm install -g redwire-doppelganger
+npm install -g consul-doppelganger
 ```
 
 This will provide the `doppelganger` command line daemon.
