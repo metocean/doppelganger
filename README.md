@@ -33,3 +33,5 @@ To reload any changes send a SIGHUP to the doppelganger daemon
 A docker container has been provided that bundles Consul 1.4, Doppelganger and Redwire to provide a facade. Check out doppelganger.yml and the examples folder for configuration. Works well with [tugboat](https://github.com/metocean/tugboat).
 
 The image will be available on the docker hub as `metocean/doppelganger` soon.
+
+Using version 1.6.0 of Redwire
