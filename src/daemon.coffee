@@ -122,6 +122,9 @@ convertfromwatch = (service) ->
 # this section should retry with a timeout
 services = {}
 getagentservices targetHttpAddr, (err, targetAgentServices) ->
+  if err?
+    onerror err
+    process.exit 1
   servicesToCreate = {}
   servicesToUpdate = {}
   servicesToDelete = {}
@@ -134,6 +137,9 @@ getagentservices targetHttpAddr, (err, targetAgentServices) ->
     ServicePort: service.Port
   diffTasks = servicesToSync.map (servicename) -> (cb) ->
     getservices sourceHttpAddr, servicename, (err, sourceServices) ->
+      if err?
+        onerror err
+        process.exit 1
       sourceServices = byserviceidsource sourceServices
       targetServices = byserviceidtarget targetAgentServices.filter (service) ->
         service.ServiceName is servicename

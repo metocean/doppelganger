@@ -171,6 +171,10 @@ services = {};
 
 getagentservices(targetHttpAddr, function(err, targetAgentServices) {
   var diffTasks, servicesToCreate, servicesToDelete, servicesToUpdate;
+  if (err != null) {
+    onerror(err);
+    process.exit(1);
+  }
   servicesToCreate = {};
   servicesToUpdate = {};
   servicesToDelete = {};
@@ -189,6 +193,10 @@ getagentservices(targetHttpAddr, function(err, targetAgentServices) {
     return function(cb) {
       return getservices(sourceHttpAddr, servicename, function(err, sourceServices) {
         var id, service, targetServices;
+        if (err != null) {
+          onerror(err);
+          process.exit(1);
+        }
         sourceServices = byserviceidsource(sourceServices);
         targetServices = byserviceidtarget(targetAgentServices.filter(function(service) {
           return service.ServiceName === servicename;
