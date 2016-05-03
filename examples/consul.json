@@ -1,8 +1,0 @@
-{
-  "datacenter": "tomtom",
-  "retry_join": [
-    "192.168.59.103"
-  ],
-  "ports": { "dns": 53 },
-  "recursor": "8.8.8.8"
-}

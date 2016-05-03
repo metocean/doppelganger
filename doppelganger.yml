@@ -1,7 +1,0 @@
-daemon:
-  build: ./docker/
-  dns: 127.0.0.1
-  volumes:
-  - ./examples:/consul
-  - ./examples:/doppelganger
-  - ./examples:/harmony
