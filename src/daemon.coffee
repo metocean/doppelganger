@@ -18,8 +18,6 @@ if args.length < 2
 [sourceHttpAddr, targetHttpAddr, servicesToSync...] = args
 configDir = process.cwd()
 
-
-
 consul = require 'consul-utils'
 mb = require 'meatbag'
 url_parse = require('url').parse
@@ -165,7 +163,10 @@ getagentservices targetHttpAddr, (err, targetAgentServices) ->
     async.series updateTasks, ->
       watches = {}
       watchservice = (name) ->
+        new Watch "#{httpAddr}/v1/catalog/service/#{serviceId}", (services) =>
+        # TODO: Something is wrong here!
         watches[name] = new consul.Service sourceHttpAddr, name, (added, removed) ->
+          console.log "#{added.map((s) -> s.id).join ', '} added, #{removed.map((s) -> s.id).join ', '} removed"
           added = added.map convertfromwatch
           removed = removed.map convertfromwatch
           for service in added

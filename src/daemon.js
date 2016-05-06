@@ -243,8 +243,16 @@ getagentservices(targetHttpAddr, function(err, targetAgentServices) {
       var clean, hascleaned, i, len, servicename, watches, watchservice;
       watches = {};
       watchservice = function(name) {
+        new Watch(httpAddr + "/v1/catalog/service/" + serviceId, (function(_this) {
+          return function(services) {};
+        })(this));
         return watches[name] = new consul.Service(sourceHttpAddr, name, function(added, removed) {
           var i, id, j, len, len1, results, service;
+          console.log((added.map(function(s) {
+            return s.id;
+          }).join(', ')) + " added, " + (removed.map(function(s) {
+            return s.id;
+          }).join(', ')) + " removed");
           added = added.map(convertfromwatch);
           removed = removed.map(convertfromwatch);
           for (i = 0, len = added.length; i < len; i++) {
